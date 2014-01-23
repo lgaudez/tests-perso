@@ -1,5 +1,6 @@
 package com.springapp.mvc;
 
+import com.springapp.model.User;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

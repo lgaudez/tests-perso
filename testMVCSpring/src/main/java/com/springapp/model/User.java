@@ -1,23 +1,17 @@
-package com.springapp.mvc;
+package com.springapp.model;
+
+import java.io.Serializable;
 
 /**
  * Created by leoG on 20/01/14.
  */
-import javax.persistence.*;
-
-@Entity(name = "account")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class User implements Serializable {
     private Long id;
 
-    @Basic
     private String firstName;
 
-    @Basic
     private String lastName;
 
-    @Basic
     private String email;
 
     public Long getId() {

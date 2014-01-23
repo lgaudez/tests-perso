@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2030492276">
+    <data-source source="LOCAL" name="defaultPersistenceUnit" uuid="a1f3cfb4-c537-4e77-8418-9a528ce97eb9">
+      <driver-ref>hsqldb.remote</driver-ref>
+      <jdbc-driver>org.hsqldb.jdbcDriver</jdbc-driver>
+      <jdbc-url>jdbc:hsqldb:mem:spring</jdbc-url>
+      <user-name>sa</user-name>
+      <libraries>
+        <library>
+          <url>file://C:\Users\leoG\.m2\repository\org\hsqldb\hsqldb\2.2.9\hsqldb-2.2.9.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="META-INF:hibernate.cfg.xml" uuid="dd5489c4-56b6-4646-9084-5e3ae8ac7f59">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/tutorial</jdbc-url>
+      <user-name>root</user-name>
+      <libraries>
+        <library>
+          <url>file://C:\Users\leoG\.m2\repository\mysql\mysql-connector-java\5.1.22\mysql-connector-java-5.1.22.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
