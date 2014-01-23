@@ -1,8 +1,5 @@
 package com.springapp.mvc;
 
-import com.springapp.dao.UserDao;
-import com.springapp.model.User;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,17 +17,13 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration("classpath:WEB-INF/spring/mvc-dispatcher-servlet.xml")
+@ContextConfiguration("file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml")
 public class AppTests {
     private MockMvc mockMvc;
 
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
     protected WebApplicationContext wac;
-
-    @Autowired
-    UserDao userDao;
-    //articlesDao = (IArticlesDao) (new XmlBeanFactory(new ClassPathResource("/spring-config-test-dao"))).getBean("articlesDao");
 
     @Before
     public void setup() {
@@ -41,33 +34,6 @@ public class AppTests {
     public void simple() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("hello"));
-    }
-
-    public void testHibernate( )
-    {
-
-
-        /** insert **/
-        User user = new User();
-        user.setFirstName("léo");
-        user.setLastName("gaudez");
-        user.setEmail("leo@gmail.com");
-        userDao.save(user);
-
-        /** select **/
-        User user2 = userDao.findByName("gaudez");
-        System.out.println(user2);
-        Assert.assertTrue(user.equals(user2));
-
-        /** update **/
-        user2.setEmail("ll@bip");
-        userDao.update(user2);
-
-        /** delete **/
-        userDao.delete(user2);
-
-        System.out.println("Done");
+                .andExpect(view().name("index"));
     }
 }
-
