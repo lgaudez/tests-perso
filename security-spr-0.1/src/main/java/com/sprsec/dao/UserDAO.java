@@ -12,4 +12,8 @@ public interface UserDAO {
 
     public List<User> findAll();
 
+    public void createUser(User user);
+
+    public void deleteUserbyId(long id);
+
 }

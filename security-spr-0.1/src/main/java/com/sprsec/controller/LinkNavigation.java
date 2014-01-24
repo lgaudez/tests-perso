@@ -14,11 +14,6 @@ public class LinkNavigation {
 		return new ModelAndView("home");
 	}
 
-    @RequestMapping(value="/inscription", method=RequestMethod.GET)
-    public ModelAndView inscription() {
-        return new ModelAndView("inscription");
-    }
-
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public ModelAndView indexPage() {
 		return new ModelAndView("home");

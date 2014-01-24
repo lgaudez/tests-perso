@@ -50,4 +50,14 @@ public class UserDAOImpl implements UserDAO {
         else
             return null;
     }
+
+    @Override
+    public void createUser(User user) {
+        sessionFactory.getCurrentSession().save(user);
+    }
+
+    @Override
+    public void deleteUserbyId(long id) {
+        User user = (User) sessionFactory.getCurrentSession().load(User.class,id);
+    }
 }
