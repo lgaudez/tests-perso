@@ -18,6 +18,11 @@ public class LinkNavigation {
 	public ModelAndView indexPage() {
 		return new ModelAndView("home");
 	}
+
+    @RequestMapping(value="/welcome", method=RequestMethod.GET)
+    public ModelAndView welcome() {
+        return new ModelAndView("welcome");
+    }
 	
 	@RequestMapping(value="/sec/moderation", method=RequestMethod.GET)
 	public ModelAndView moderatorPage() {

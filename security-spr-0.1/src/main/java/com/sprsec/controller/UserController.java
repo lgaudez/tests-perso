@@ -27,7 +27,7 @@ public class UserController {
     @Autowired
     UserService userService;
     @Autowired
-    RoleService rs= new RoleServiceImpl();
+    RoleService rs;
 
     @RequestMapping(value="/user/info", method=RequestMethod.GET)
     public String getUserInfo(ModelMap modelmap){
@@ -45,14 +45,7 @@ public class UserController {
 
     @RequestMapping(value="/inscription", method=RequestMethod.POST)
     public String submitForm(@ModelAttribute User user, Model m) {
-        //TODO sauver l'user dans la base
-        /* Role r = new Role();
-        r.setId(3);
-        r.setRole("user");
-        rs.getRole(3); */
-        //r.getUserRoles().add(user);
-        Role r = rs.getRole(3);
-       // r.getUserRoles().add(user);
+        Role r = rs.getRole(3);//ROLE_USER
         user.setRole(r);
         userService.createUser(user);
         m.addAttribute("message", "Sauvegardé dans la base de données t'as vu! : " + user.getFirstName() + " " + user.getLastName());

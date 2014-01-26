@@ -52,6 +52,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
+    @Transactional
     public void createUser(User user) {
         sessionFactory.getCurrentSession().save(user);
     }
