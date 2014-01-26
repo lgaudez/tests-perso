@@ -11,9 +11,10 @@
     <mvc:annotation-driven />
 
     <!-- Scan classpath for annotations (eg: @Service, @Repository etc) -->
-    <context:component-scan base-package="com.sprsec"/>
+    <context:component-scan base-package="com.languageApp"/>
 
-    <!-- JDBC Data Source. It is assumed you have MySQL running on localhost port 3306 with
+    <!-- TODO cacher password et aller chercher ces données dans application.properties
+        sJDBC Data Source. It is assumed you have MySQL running on localhost port 3306 with
          username root and blank password. Change below if it's not the case -->
     <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -28,7 +29,7 @@
         <property name="dataSource" ref="myDataSource"/>
         <property name="packagesToScan">
             <array>
-                <value>com.sprsec</value>
+                <value>com.languageApp</value>
             </array>
         </property>
         <property name="hibernateProperties">

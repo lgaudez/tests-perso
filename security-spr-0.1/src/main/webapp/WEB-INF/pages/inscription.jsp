@@ -1,18 +1,12 @@
 <%--
-  Created by IntelliJ IDEA.
   User: leoG
   Date: 24/01/14
   Time: 16:53
-  To change this template use File | Settings | File Templates.
 --%>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<html>
-<!-- <head>
-    <title>Inscription</title>
-</head> -->
-<body>
 
 <form:form method="POST" modelAttribute="user">
     <c:if test="${not empty message}"><div class="message green">${message}</div></c:if>
@@ -56,6 +50,4 @@
         </tr>
     </table>
 </form:form>
-</body>
-</html>
 

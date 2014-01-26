@@ -10,7 +10,8 @@
 <p>
 <!-- <a href="${pageContext.request.contextPath}/sec/moderation.html">Moderation page</a><br/> -->
 <a href="${pageContext.request.contextPath}/admin/administration.html"><spring:message code="label.admin"/></a><br/>
-<a href="${pageContext.request.contextPath}/user/info.html"><spring:message code="label.connect"/></a><br/>
+<a href="${pageContext.request.contextPath}/user/login-form.html"><spring:message code="label.connect"/></a><br/>
+<a href="${pageContext.request.contextPath}/user/info.html"><spring:message code="label.info"/></a><br/>
 <a href="/inscription.html"><spring:message code="label.register"/></a><br/>
 <!-- <a href="${pageContext.request.contextPath}/admin/second.html">Second Admin page</a><br/> -->
 </p>
