@@ -1,1 +1,1 @@
-<p>by Léo Gaudez</p>
+<p>by LÃ©o Gaudez</p>

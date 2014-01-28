@@ -54,8 +54,8 @@
                 org.springframework.web.servlet.view.tiles2.TilesView
             </value>
         </property>
-     <!-- <property name="prefix" value="/WEB-INF/pages/tiles/"/>
-        <property name="suffix" value=".jsp"/> -->
+        <!-- <property name="prefix" value="/WEB-INF/pages/tiles/"/>
+           <property name="suffix" value=".jsp"/> -->
     </bean>
     <bean id="tilesConfigurer"
           class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
@@ -67,19 +67,20 @@
     </bean>
 
     <!-- Map simple view name such as "test" into /WEB-INF/pages/test.jsp -->
-   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-       <property name="prefix" value="/WEB-INF/pages/" />
-       <property name="suffix" value=".jsp" />
-   </bean>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
 
     <!-- internationalization and localization -->
     <bean id="messageSource"
           class="org.springframework.context.support.ReloadableResourceBundleMessageSource" >
-        <property name="basename" value="WEB-INF/langues/messages" />
-        <property name="defaultEncoding" value="UTF-8"/>
+       <property name="basename" value="WEB-INF/langues/messages" />
+        <!-- <property name="basename" value="classpath:langues" /> -->
+       <!-- <property name="defaultEncoding" value="UTF-8"/> TODO Problème d'encodage sur messages_fr.properties si on active cette option-->
     </bean>
 
-   <bean id="localeChangeInterceptor"
+    <bean id="localeChangeInterceptor"
           class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
         <property name="paramName" value="lang" />
     </bean>
