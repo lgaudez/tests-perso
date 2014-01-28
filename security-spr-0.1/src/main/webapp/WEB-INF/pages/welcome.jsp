@@ -1,1 +1,1 @@
-<jsp:forward page="hello.jsp"></jsp:forward>
+<p> coucou :)</p>

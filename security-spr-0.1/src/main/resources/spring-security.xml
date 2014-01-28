@@ -10,7 +10,7 @@
 	
 		<intercept-url pattern="/sec/moderation.html" access="ROLE_MODERATOR" />
 		<intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
-        <intercept-url pattern="/user/*" access="ROLE_USER" />
+       <intercept-url pattern="/user/*" access="ROLE_USER" />
 		
 		<form-login login-page="/user-login.html" 
 			default-target-url="/success-login.html"

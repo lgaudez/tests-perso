@@ -4,7 +4,7 @@
         "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
     <definition name="base.definition"
-                template="WEB-INF/pages/tiles/layout.jsp"> <!-- de part <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
+                template="/WEB-INF/pages/tiles/layout.jsp"> <!-- de part <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
         <put-attribute name="title" value="" />
         <put-attribute name="header" value="/WEB-INF/pages/tiles/header.jsp" />
         <put-attribute name="menu" value="/WEB-INF/pages/tiles/menu.jsp" />
@@ -12,14 +12,41 @@
         <put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp" />
     </definition>
 
-    <definition name="inscription" extends="base.definition">
+    <definition name="home.definition"
+                template="/WEB-INF/pages/tiles/layoutHome.jsp"> <!-- de part <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/pages/tiles/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp" />
+    </definition>
+
+    <definition name="home.connected.definition"
+                template="/WEB-INF/pages/tiles/layoutUserConnected.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/pages/tiles/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/pages/tiles/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/pages/tiles/footer.jsp" />
+    </definition>
+
+    <definition name="inscription" extends="home.definition">
         <put-attribute name="title" value="Inscription" />
         <put-attribute name="body" value="/WEB-INF/pages/inscription.jsp" />
     </definition>
 
-    <definition name="home" extends="base.definition">
+    <definition name="home" extends="home.definition">
         <put-attribute name="title" value="Accueil" />
         <put-attribute name="body" value="/WEB-INF/pages/home.jsp" />
+    </definition>
+
+    <definition name="connected" extends="home.connected.definition">
+        <put-attribute name="title" value="Accueil" />
+        <put-attribute name="body" value="/WEB-INF/pages/welcome.jsp" />
+    </definition>
+
+    <definition name="info" extends="home.connected.definition">
+        <put-attribute name="title" value="Informations" />
+        <put-attribute name="body" value="/WEB-INF/pages/info.jsp" />
     </definition>
 
 </tiles-definitions>

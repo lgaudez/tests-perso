@@ -4,13 +4,15 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>YEYE</title>
+    <title>gestion des utilisateurs</title>
 </head>
 <body>
 <h1>Users</h1>
 <ul>
     <c:forEach var="u" items="${users}">
-        <li>${u.id} - ${u.login} - ${u.password} - ${u.role.role}</li>
+        <li>${u.id} - ${u.login} - ${u.password} - ${u.role.role}
+          <form action="delete/${u.id}" method="post"><input type="submit" value="Delete"/></form>
+        </li>
     </c:forEach>
 </ul>
 </body>
