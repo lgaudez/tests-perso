@@ -99,7 +99,6 @@ publish
 # Others
 [Bb]in
 [Oo]bj
-sql
 TestResults
 *.Cache
 ClientBin
@@ -136,6 +135,7 @@ Desktop.ini
 # Packages
 *.egg
 *.egg-info
+*.idea
 dist
 build
 eggs
