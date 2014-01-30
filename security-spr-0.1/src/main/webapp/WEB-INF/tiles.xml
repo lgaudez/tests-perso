@@ -49,4 +49,21 @@
         <put-attribute name="body" value="/WEB-INF/pages/info.jsp" />
     </definition>
 
+    <definition name="login-form" extends="home.connected.definition">
+        <put-attribute name="title" value="Informations" />
+        <put-attribute name="body" value="/WEB-INF/pages/login-form.jsp" />
+    </definition>
+
+    <definition name="error-login" extends="home.connected.definition">
+        <put-attribute name="title" value="Informations" />
+        <put-attribute name="body" value="/WEB-INF/pages/login-form.jsp" />
+    </definition>
+
+    <definition name="success-login" extends="home.connected.definition">
+        <put-attribute name="title" value="Informations" />
+        <put-attribute name="body" value="/WEB-INF/pages/success-login.jsp" />
+    </definition>
+
+
+
 </tiles-definitions>
