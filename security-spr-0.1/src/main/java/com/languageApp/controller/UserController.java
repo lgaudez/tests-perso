@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.util.Date;
 
 /**
  * Created by leoG on 24/01/14.
@@ -67,6 +68,7 @@ public class UserController {
         }
         Role r = rs.getRole(3);//ROLE_USER
         user.setRole(r);
+        user.setCreated(new Date());
         userService.createUser(user);
         m.addAttribute("message", user.getFirstName() + " " + user.getLastName());
         return "inscription";

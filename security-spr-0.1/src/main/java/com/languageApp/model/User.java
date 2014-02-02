@@ -2,9 +2,12 @@ package com.languageApp.model;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 @Entity
 @Table(name="users")
@@ -34,7 +37,17 @@ public class User {
     //TODO validator
     String spokenLanguages;
 
-    String dateOfBirth;
+    @Column(name = "dateOfBirth", columnDefinition="DATETIME")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat (pattern = "DD/MM/YYYY")
+    @NotNull
+    Date dateOfBirth;
+    @Column(name = "created", columnDefinition="DATETIME")
+    @Temporal(TemporalType.TIMESTAMP)
+    Date created;
+    @NotEmpty
+    @Phone
+    String phone;
 
     //@OneToOne(cascade=CascadeType.ALL)
     @OneToOne
@@ -44,12 +57,28 @@ public class User {
 	)
 	private Role role;
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getLastName() {

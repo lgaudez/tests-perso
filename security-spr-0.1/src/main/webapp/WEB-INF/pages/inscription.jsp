@@ -46,7 +46,12 @@
                     <td><form:errors  path="mail" class="error"/></td>
                 </tr>
                 <tr>
-                    <td><form:label path="dateOfBirth"><spring:message code="label.dateofbirth"/></form:label></td>
+                    <td><form:label path="phone"><spring:message code="label.phone"/></form:label></td>
+                    <td><form:input path="phone" /></td>
+                    <td><form:errors path="phone" class="error"/></td>
+                </tr>
+                <tr>
+                    <td><form:label path="dateOfBirth"><spring:message code="label.dateofbirth"/> <spring:message code="label.formatDOB"/></form:label></td>
                     <td><form:input path="dateOfBirth" /></td>
                     <td><form:errors  path="dateOfBirth" class="error"/></td>
                 </tr>

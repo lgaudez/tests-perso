@@ -13,7 +13,9 @@ CREATE TABLE `users` (
   `mail` varchar(50) NOT NULL UNIQUE,
   `citizenShip` varchar(50) NOT NULL,
   `spokenLanguages` varchar(250)  NOT NULL,
-  `dateOfBirth` varchar(10)  NOT NULL,
+  `dateOfBirth` date NOT NULL,
+  `created` datetime default NOW(),
+  `phone` varchar(20),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
