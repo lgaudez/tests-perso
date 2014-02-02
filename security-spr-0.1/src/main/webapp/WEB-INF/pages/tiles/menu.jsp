@@ -8,8 +8,8 @@
     <sec:authorize access="hasRole('ROLE_ADMIN')">
         <a href="${pageContext.request.contextPath}/admin/administration">admin</a><br/>
     </sec:authorize>
-<a href="${pageContext.request.contextPath}/user/info.html"><spring:message code="label.info"/></a><br/>
     <sec:authorize access="hasRole('ROLE_USER')">
+        <a href="${pageContext.request.contextPath}/user/info.html"><spring:message code="label.info"/></a><br/>
         <a href="${pageContext.request.contextPath}/connected.html"><spring:message code="label.home"/></a>
     </sec:authorize>
       <sec:authorize access="isAnonymous()">

@@ -53,6 +53,10 @@
     {
         color: green;
     }
+
+    #login,#inscription{
+        text-align: left;
+    }
     -->
 </style>
 <html>
